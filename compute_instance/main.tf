@@ -1,7 +1,5 @@
 module "instance_template" {
-  source  = "terraform-google-modules/vm/google//modules/instance_template"
-  version = "~> 11.0"
-
+  source  = "git::ssh://sudhir-maurya@github.com/gcp-modules.git//compute_instance/instance_template"
   region          = var.region
   project_id      = var.project_id
   subnetwork      = var.subnetwork
@@ -9,8 +7,7 @@ module "instance_template" {
 }
 
 module "compute_instance" {
-  source  = "terraform-google-modules/vm/google//modules/compute_instance"
-  version = "~> 11.0"
+  source  = "git::ssh://sudhir-maurya@github.com/gcp-modules.git//compute_instance/compute_instance"
 
   region              = var.region
   zone                = var.zone

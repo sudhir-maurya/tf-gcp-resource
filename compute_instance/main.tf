@@ -1,5 +1,5 @@
 module "instance_template" {
-  source  = "git::ssh://sudhir-maurya@github.com/gcp-modules.git//compute_instance/instance_template"
+  source  = "git::git@github.com:sudhir-maurya/gcp-modules.git//compute_instance/instance_template"
   region          = var.region
   project_id      = var.project_id
   subnetwork      = var.subnetwork
@@ -7,7 +7,7 @@ module "instance_template" {
 }
 
 module "compute_instance" {
-  source  = "git::ssh://sudhir-maurya@github.com/gcp-modules.git//compute_instance/compute_instance"
+  source  = "git::git@github.com:sudhir-maurya/gcp-modules.git//compute_instance/compute_instance"
 
   region              = var.region
   zone                = var.zone

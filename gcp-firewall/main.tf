@@ -9,4 +9,5 @@ resource "google_compute_firewall" "rules" {
     ports    = ["80", "8080", "1000-2000"]
   }
   target_tags = ["web"]
+  source_ranges = ["0.0.0.0/0"]
 }
